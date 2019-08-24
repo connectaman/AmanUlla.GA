@@ -1,0 +1,384 @@
+body {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    box-sizing: border-box;
+    color: #042f4b;
+  }
+  .navbars {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+  }
+  
+  .navbars a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbars a:hover {
+    background-color: #000;
+    color:#4CAF50;
+    text-decoration: none;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbars a {
+      float: none;
+      display: block;
+    }
+  }
+  .details-sections{
+      background-color: #4CAF50;
+      border-top-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+
+  }
+  
+  section {
+    padding: 0 16px 8px;
+    
+  }
+  .rounded-border{
+    border:2px solid #4CAF50;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  header {
+    position: relative;
+    background-color: black;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  @media (pointer: coarse) and (hover: none) {
+    header {
+      background: url('https://wonderfulengineering.com/wp-content/uploads/2014/04/code-wallpaper-8.jpg') black no-repeat center center scroll;
+    }
+    header video {
+      display: none;
+    }
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  .card:hover{
+    box-shadow: 10px 10px 16px -3px rgba(76,175,79,1);
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+
+  footer{
+      padding:20px;
+      background-color: #555;
+  }
+
+  .rounded-social-buttons {
+    text-align: center;
+  }
+  
+  .rounded-social-buttons .social-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 3.125rem;
+    height: 3.125rem;
+    border: 0.125rem solid transparent;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    color: #fefefe;
+    font-size: 1.5625rem;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 1.6875rem;
+    transition: all 0.5s ease;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  .github{
+    background-color: #000;
+  }
+  
+  .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  
+  .rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
+    font-size: 25px;
+  }
+  
+  .rounded-social-buttons .social-button.facebook {
+    background: #3b5998;
+  }
+  
+  .rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+    color: #3b5998;
+    background: #fefefe;
+    border-color: #3b5998;
+  }
+  
+  .rounded-social-buttons .social-button.twitter {
+    background: #55acee;
+  }
+  
+  .rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+    color: #55acee;
+    background: #fefefe;
+    border-color: #55acee;
+  }
+  
+  .rounded-social-buttons .social-button.linkedin {
+    background: #007bb5;
+  }
+  
+  .rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+    color: #007bb5;
+    background: #fefefe;
+    border-color: #007bb5;
+  }
+  
+  .rounded-social-buttons .social-button.youtube {
+    background: #bb0000;
+  }
+  
+  .rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+    color: #bb0000;
+    background: #fefefe;
+    border-color: #bb0000;
+  }
+  
+  .rounded-social-buttons .social-button.instagram {
+    background: #125688;
+  }
+  
+  .rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+    color: #125688;
+    background: #fefefe;
+    border-color: #125688;
+  }
+  .image-back{
+    background-color: #4CAF50;
+    padding:20px;
+  }
+  .skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+  }
+  .skills-border{
+
+    padding:10px;
+  }
+  .html {width: 90%; background-color: #D68910;}
+  .css {width: 80%; background-color: #2196F3;}
+  .js {width: 65%; background-color: #f44336;}
+  .java {width: 80%; background-color: #808080;}
+  .c {width: 70%; background-color: #5499C7;}
+  .cpp {width: 60%; background-color: #CCD1D1;}
+  .emc {width: 80%; background-color: #922B21;}
+  .mean {width: 40%; background-color: #808080;}
+  .jsp {width: 60%; background-color: #17A589;}
+  .servlet {width: 60%; background-color: #B7950B;}
+  .mvc {width: 60%; background-color: #EDBB99;}
+  .iot {width: 60%; background-color: #154360;}
+  .mysql {width: 60%; background-color: #A9DFBF;}
+  .mongo {width: 40%; background-color: #808080;}
+
+  .one-one{
+    border-right:2px solid #4CAF50;
+    border-bottom:2px solid #4CAF50;  
+  }
+  .one-two{
+    border-bottom: 2px solid #4CAF50;
+  }
+  .two-two{
+    border-left:2px solid #4CAF50;
+  }
+.education{
+  background-color: #4CAF50;
+}
+.testimonial-section{
+  background:linear-gradient(to right,#4CAF50,grey);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.inner-width{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.testimonial-section h1{
+  font-weight: 400;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.testimonial-pics{
+  padding: 40px 0;
+}
+
+.testimonial-pics img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 20px;
+  filter: grayscale(100%);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.testimonial-pics img:hover, .testimonial-pics img.active{
+  filter: none;
+}
+
+
+.testimonial-contents{
+  max-width: 600px;
+  margin: auto;
+}
+
+.testimonial{
+  display: none;
+  background-color: white;
+  padding:20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.testimonial.active{
+  display: block;
+}
+
+.testimonial p{
+  color: #5c5c5c;
+  margin-bottom: 20px;
+}
+
+.testimonial .description{
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 15px;
+}
+.tab {
+  float: left;
+  border: 1px solid #4CAF50;
+  background-color: #4CAF50;
+  width: 30%;
+  height: auto;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  color:white;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+.freelance{
+  border:2px dotted #4CAF50;
+  margin-bottom: 20px;
+}
+.btn-project{
+  width: auto;
+  margin:10px;
+}

@@ -426,7 +426,11 @@ border: 1px solid #fff;
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+  transition: all 100ms ease-out;
 }
+/* .column img:hover{
+  transform: scale(1.04);
+} */
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -445,3 +449,9 @@ border: 1px solid #fff;
     max-width: 100%;
   }
 }
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+

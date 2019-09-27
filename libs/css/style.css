@@ -267,7 +267,7 @@ body {
 }
 .testimonial-section{
   background:linear-gradient(to right,#4CAF50,grey);
-  padding: 80px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
@@ -292,7 +292,7 @@ body {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  margin: 0 20px;
+  margin: 0 2px;
   filter: grayscale(100%);
   transition: .3s;
   cursor: pointer;
@@ -311,7 +311,7 @@ body {
 .testimonial{
   display: none;
   background-color: white;
-  padding:20px;
+  padding:2px;
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
 }
@@ -455,3 +455,39 @@ border: 1px solid #fff;
   transform: scale(1.5); 
 }
 
+.project-video{
+  margin:10px;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 5px;
+  height:100%;
+  text-align: center;
+}
+
+#London {background-color:red;}
+#Paris {background-color:green;}
+#Tokyo {background-color:blue;}
+#Oslo {background-color:orange;}
+#bb{background-color: pink;}
+#forest{background-color: gold;}
+#hand{background-color: cyan;}

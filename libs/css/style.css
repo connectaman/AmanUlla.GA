@@ -33,6 +33,18 @@ body {
       float: none;
       display: block;
     }
+    .videotimeline iframe{
+      width:250px;
+      z-index:-1;
+    }
+   .tablink{
+     z-index: 1;
+   }
+   .timeline{
+  
+     left:-30% !important;
+   }
+
   }
   .details-sections{
       background-color: #4CAF50;
@@ -491,3 +503,5 @@ border: 1px solid #fff;
 #bb{background-color: pink;}
 #forest{background-color: gold;}
 #hand{background-color: cyan;}
+
+

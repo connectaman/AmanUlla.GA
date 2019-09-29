@@ -94,6 +94,10 @@
               <p>Hello Folks,<br></p>
              <p>
               Coding Geek based out of Bangalore, Feed me Coffee and i will code for you.<br>
+              I love building things. While hard engineering problems are often intrinsically fun to tackle,
+              I'm most attracted to solving real customer
+
+
               <ul style="list-style-type: none;">
                 <li><span>&#9996;</span>  Result oriented fresher with experience as a Developer, Trainer, Project Management,<br>&nbsp;&nbsp;&nbsp;&nbsp; Product Development, UI/UX, Web Development.</li><br>
                 <li><span>&#9996;</span> Won Best Internship project award for website development at Sookshmas Pvt Ltd</li><br>
@@ -438,6 +442,60 @@ Ufff.. Lots to tell find it in the Achievement Section. <span style="font-size: 
 
   
       <hr>
+      <div class="experience">
+        <center><h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Industry Exposure</h1>
+        </center>
+        <div class="container">
+          <div class="page-header">
+            <h1 id="timeline">Timeline</h1>
+          </div>
+          <ul class="timeline">
+            <li>
+              <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="timeline-title">Java Developer and Trainer</h4>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 4th July 2019 and present</small></p>
+                </div>
+                <div class="timeline-body">
+                  <p>NIIT Vijaynagar (Y Square Academy)</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="timeline-title">Technical Trainer</h4>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> April 2018 to May 2019</small></p>
+
+                </div>
+                <div class="timeline-body">
+                  <p>SST Technologies</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="timeline-title">Full Stack MEAN Developer</h4>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> January 2019 to March 2019</small></p>
+                </div>
+                <div class="timeline-body">
+                  <p>Sookshmas Ptv Ltd</p>
+                </div>
+              </div>
+            </li>
+            
+          
+          </ul>
+        </div>
+
+      </div>
+
+<hr>
+
   <div class="projects">
     <center><h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Projects</h1>
     </center>
@@ -447,7 +505,7 @@ Ufff.. Lots to tell find it in the Achievement Section. <span style="font-size: 
         <button class="btn btn-success btn-project" id="academy-btn">Academy Projects</button>
         <button class="btn btn-success btn-project" id="freelancebtn">Freelance Projects</button>
         <button class="btn btn-info btn-project" id="closeproject">Close</button>
-         <- (Click on the Button to see the project)
+         <- (Click/Hover on the Button to see the project)
          
       <div class="freelance" id="freelance">
       
@@ -638,11 +696,11 @@ Ufff.. Lots to tell find it in the Achievement Section. <span style="font-size: 
          
 
 <div id="London" class="tabcontent">
-  <iframe width="651" height="488" src="https://www.youtube.com/embed/hsVziDVa0HY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="v1" width="651" height="488" src="https://www.youtube.com/embed/hsVziDVa0HY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <div id="Paris" class="tabcontent">
-    <iframe width="651" height="488" src="https://www.youtube.com/embed/o99ykwxeRZs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <iframe width="651" height="488" src="https://www.youtube.com/embed/o99ykwxeRZs" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 <div id="Tokyo" class="tabcontent">
     <iframe width="651" height="488" src="https://www.youtube.com/embed/7HdarR5I5iU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -659,7 +717,7 @@ Ufff.. Lots to tell find it in the Achievement Section. <span style="font-size: 
       <iframe width="651" height="488" src="https://www.youtube.com/embed/z9Ojfkm5BKM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
     
 
-<button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">Mini Robot</button>
+<button id="vb1" class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">Mini Robot</button>
 <button class="tablink" onclick="openCity('Paris', this, 'green')">Smart Traffic Congestion</button>
 <button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Goggle for Visually Impaired</button>
 <button class="tablink" onclick="openCity('Oslo', this, 'orange')">Smart Plantation</button>
@@ -668,6 +726,61 @@ Ufff.. Lots to tell find it in the Achievement Section. <span style="font-size: 
 <button class="tablink" onclick="openCity('hand', this, 'cyan')">Smart HandCuff</button>
 
 <script>
+var videos = document.getElementsByTagName("iframe"), fraction = 0.8;
+
+function checkScroll() {
+
+
+  for(var i = 0; i < videos.length; i++) {
+    var video = videos[i];
+
+    var x = 0,
+        y = 0,
+        w = video.width,
+        h = video.height,
+        r, //right
+        b, //bottom 
+        visibleX, visibleY, visible,
+        parent;
+
+
+    parent = video;
+    while (parent && parent !== document.body) {
+      x += parent.offsetLeft;
+      y += parent.offsetTop;
+      parent = parent.offsetParent;
+    }
+
+    r = x + parseInt(w);
+    b = y + parseInt(h);
+
+
+    visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+    visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+
+
+    visible = visibleX * visibleY / (w * h);
+
+
+    if (visible > fraction) {
+      playVideo();
+    } else {
+      pauseVideo()
+
+    }
+  }
+
+};
+
+window.addEventListener('scroll', checkScroll, false);
+window.addEventListener('resize', checkScroll, false);
+
+//check at least once so you don't have to wait for scrolling for the video to start
+window.addEventListener('load', checkScroll, false);
+checkScroll();
+
+
+
 function openCity(cityName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -686,6 +799,17 @@ function openCity(cityName,elmnt,color) {
 document.getElementById("defaultOpen").click();
 </script>
 
+
+<script>
+$(document).ready(function(){
+  $('#vb1').click(function(){
+    $('#v1').get(0).stopVideo();
+  });
+  
+
+});
+
+</script>
 
              
 
@@ -940,6 +1064,11 @@ toggleContent = (item) => {
                 $("#academy").show();
               });
               $("#closeproject").click(function(){
+                $("#freelance").hide();
+                $("#industry").hide();
+                $("#academy").hide();
+              });
+              $("#closeproject").hover(function(){
                 $("#freelance").hide();
                 $("#industry").hide();
                 $("#academy").hide();

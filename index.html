@@ -706,35 +706,50 @@ Ufff.. Lots to tell find it in the Achievement Section. <span style="font-size: 
        <div class="container">
          
 
-<div id="London" class="tabcontent">
-  <iframe id="v1" width="651" height="488" src="https://www.youtube.com/embed/hsVziDVa0HY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
 
-<div id="Paris" class="tabcontent">
-    <iframe width="651" height="488" src="https://www.youtube.com/embed/o99ykwxeRZs" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-<div id="Tokyo" class="tabcontent">
-    <iframe width="651" height="488" src="https://www.youtube.com/embed/7HdarR5I5iU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
 
-<div id="Oslo" class="tabcontent">
-    <iframe width="651" height="488" src="https://www.youtube.com/embed/kwDw59BgudM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="VideoContainer" class="tabcontent">
+  <iframe id="videoPlayer" width="651" height="488" src="https://www.youtube.com/embed/hsVziDVa0HY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div id="bb" class="tabcontent">
-    <iframe width="651" height="488" src="https://www.youtube.com/embed/fld8DMxOtP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-<div id="forest" class="tabcontent">
-    <iframe width="651" height="488" src="https://www.youtube.com/embed/ofn18fw_7-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
-  <div id="hand" class="tabcontent">
-      <iframe width="651" height="488" src="https://www.youtube.com/embed/z9Ojfkm5BKM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
     
 
-<button id="vb1" class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">Mini Robot</button>
-<button class="tablink" onclick="openCity('Paris', this, 'green')">Smart Traffic Congestion</button>
-<button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Goggle for Visually Impaired</button>
-<button class="tablink" onclick="openCity('Oslo', this, 'orange')">Smart Plantation</button>
-<button class="tablink" onclick="openCity('bb', this, 'pink')">Black box for vehicles</button>
-<button class="tablink" onclick="openCity('forest', this, 'gold')">Forest Monitoring</button>
-<button class="tablink" onclick="openCity('hand', this, 'cyan')">Smart HandCuff</button>
+<button id="vb1" class="tablink" loc="London">Mini Robot</button>
+<button class="tablink" loc="Paris" >Smart Traffic Congestion</button>
+<button class="tablink" loc="Tokyo">Goggle for Visually Impaired</button>
+<button class="tablink" loc="Oslo">Smart Plantation</button>
+<button class="tablink" loc="bb">Black box for vehicles</button>
+<button class="tablink" loc="forest">Forest Monitoring</button>
+<button class="tablink" loc="hand">Smart HandCuff</button>
+<button class="tablink" loc="close" id="closeVideo" style="display:none">Close</button>
+
+
+<script>
+jQuery(document).ready(function(){
+  var videos= {'London':'hsVziDVa0HY',
+              'Paris':'o99ykwxeRZs',
+              'Tokyo':'7HdarR5I5iU',
+              'Oslo':'kwDw59BgudM',
+              'bb':'fld8DMxOtP0',
+              'forest':'ofn18fw_7-E',
+              'hand':'z9Ojfkm5BKM' 
+};
+jQuery('body').on("click",'.tablink',function(){
+  if($(this).attr('loc')=='close'){
+    $(this).css('display','none');
+    jQuery("#VideoContainer").css('display','none');
+
+  }
+  else{
+    jQuery("#closeVideo").css("display","block");
+    jQuery("#VideoContainer").css('display','block');
+    jQuery("#videoPlayer").attr('src','https://www.youtube.com/embed/'+videos[$(this).attr('loc')]);
+  }
+  })
+});
+
+
+</script>
 
 <script>
 var videos = document.getElementsByTagName("iframe"), fraction = 0.8;
